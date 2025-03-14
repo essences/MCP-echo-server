@@ -1,0 +1,22 @@
+{
+  "name": "echo-server",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "start": "node build/index.js",
+    "dev": "npm run build && npm start"
+  },
+  "keywords": ["mcp", "echo"],
+  "author": "",
+  "license": "ISC",
+  "description": "Simple MCP echo server that returns input text",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.5.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  }
+}
